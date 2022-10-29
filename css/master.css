@@ -1,0 +1,97 @@
+html {
+	scroll-behavior: smooth;
+	font-family: "Roboto", sans-serif;
+}
+* {
+	box-sizing: border-box;
+	text-decoration: none;
+	list-style: none;
+}
+.container {
+	width: 90%;
+	margin: auto;
+}
+/* start the main style */
+body {
+	background: rgb(44, 44, 145);
+}
+body .country_container {
+	width: 60%;
+	background-color: white;
+	padding: 40px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+@media (max-width: 768px) {
+	body .country_container {
+		width: 90%;
+	}
+}
+body .container .country_container form .field,
+body .container .country_container .country_Informations > div,
+body .container .country_container .country_Informations .other .info {
+	display: flex;
+	gap: 10px;
+}
+body .container .country_container .country_Informations > div {
+	flex-direction: column;
+	margin-top: 30px;
+}
+body .container .country_container .country_Informations > div:first-child {
+	align-items: center;
+}
+body .container .country_container .info {
+	align-items: center;
+}
+body .container .country_container .country_Informations .name {
+	font-size: 1.6rem;
+	font-weight: 500;
+}
+body .container .country_container form input {
+	flex: 1;
+	padding: 10px;
+	border: none;
+	border-bottom: solid 5px rgb(100, 100, 222);
+	outline: none;
+	font-size: 1.3rem;
+}
+body .container .country_container form input.error {
+	border-bottom: solid 5px rgb(255, 0, 0);
+	position: relative;
+}
+body .container .country_container form input.error::before {
+	content: "sdasdadadasd";
+	position: absolute;
+}
+body .container .country_container img {
+	max-width: 100%;
+}
+body .container .country_container form button {
+	padding: 10px;
+	background-color: rgb(100, 100, 222);
+	outline: none;
+	border: none;
+	color: white;
+	border-radius: 20px;
+	font-size: 1.1rem;
+}
+body .container .country_container .info_title {
+	font-size: 1.4rem;
+	color: rgb(0, 0, 0);
+}
+body .container .country_container .info_content {
+	font-size: 1.3rem;
+	color: rgb(56, 54, 54);
+}
+.error_message {
+	padding: 10px;
+	color: red;
+	font-size: 1.2rem;
+	opacity: 0;
+	transition: 0.5s;
+}
+.error_message.shown {
+	opacity: 1;
+}
